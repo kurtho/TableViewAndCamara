@@ -10,6 +10,16 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
+    var pictureLists: [PictureList] = [
+    PictureList(pic: "sky", content: "123"),
+    PictureList(pic: "sky", content: "234"),
+    PictureList(pic: "sky", content: "333")
+    
+    ]
+    
+    
+    
+    
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func addButton(sender: AnyObject) {
@@ -56,15 +66,68 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 5
+        return pictureLists.count
     }
+    
+    var photo = "sky"
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! TableViewCell
-        
+        cell.myImage.image = UIImage(named: pictureLists[indexPath.row].pic)
         
         return cell
     }
+    
+    
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        let shareAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Share", handler: {
+            (action, indexPath) -> Void in
+            let defaultText = "Just checking in at " + self.pictureLists[indexPath.row].content
+            if let imageToShare = UIImage(named: self.pictureLists[indexPath.row].pic) {
+                let activityController = UIActivityViewController(activityItems: [defaultText, imageToShare], applicationActivities: nil)
+                self.presentViewController(activityController, animated: true, completion: nil)
+            }
+            
+        })
+        //刪除按鈕
+        let deleteAction = UITableViewRowAction(style:
+            UITableViewRowActionStyle.Default, title: "Delete", handler: { (action, indexPath)  -> Void in
+                //從data source刪除列
+                self.pictureLists.removeAtIndex(indexPath.row)
+                self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                
+                
+        })
+        
+        shareAction.backgroundColor = UIColor.blueColor()
+        deleteAction.backgroundColor = UIColor(red: 202.0/255.0, green: 202.0/255.0, blue: 203.0/255.0, alpha: 1.0)
+        return [deleteAction, shareAction]
+    }
+    
+    
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "Edit" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let destinationController = segue.destinationViewController as! ImageViewController
+                destinationController.storage = pictureLists[indexPath.row]
+            }
+        }
+    }
+    
 }
+
+
+
+
+class PictureList {
+    var pic: String
+    var content: String
+    init(pic: String, content: String){
+        self.pic = pic
+        self.content = content
+    }
+}
+
+
 
