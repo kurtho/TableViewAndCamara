@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
+    
+    
+    
+    
     var pictureLists: [PictureList] = [
     PictureList(pic: "sky", content: "123"),
     PictureList(pic: "sky", content: "234"),
@@ -19,6 +23,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     
+    @IBAction func testButton(sender: AnyObject) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .Camera
+        self.presentViewController(imagePicker, animated:
+            true, completion: nil)
+    }
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -43,10 +53,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         
     }
-    
-    
-    
-    
+
     
     
     override func viewDidLoad() {
@@ -59,6 +66,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    
+    // MARK: - table view
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -115,9 +124,29 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    // MARK: - camara function
+    
+    func imagePickerController(picker: UIImagePickerController,didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        
+        let image = info["UIImagePickerControllerOriginalImage"] as! UIImage
+        
+        
+//        self.myImage.image = image
+        
+        let paths =
+            NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        let documentsDirectory = paths.first
+        let interval = NSDate.timeIntervalSinceReferenceDate()
+        let name = "\(interval).jpg"
+        let path = (documentsDirectory as
+            NSString?)?.stringByAppendingPathComponent(name)
+        let data = UIImageJPEGRepresentation(image, 0.9)
+        data?.writeToFile(path!, atomically: true)
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+    
 }
-
-
 
 
 class PictureList {

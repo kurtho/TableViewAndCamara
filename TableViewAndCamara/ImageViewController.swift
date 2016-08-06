@@ -20,7 +20,7 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         self.scroll.maximumZoomScale = 4
         
         imageView.image = UIImage(named: storage.pic)
-        
+        myTextField.text = storage.content
         
     }
 
