@@ -14,10 +14,13 @@
 		29E97FED1D545A6A00447AE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29E97FEB1D545A6A00447AE2 /* LaunchScreen.storyboard */; };
 		29E97FF51D545B8000447AE2 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E97FF41D545B8000447AE2 /* TableViewCell.swift */; };
 		29E97FF91D54683900447AE2 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E97FF81D54683900447AE2 /* ImageViewController.swift */; };
+<<<<<<< HEAD
 		29E9814D1D5869B200447AE2 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E9814C1D5869B200447AE2 /* AddViewController.swift */; };
 		29E981521D58B37200447AE2 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 29E981501D58B37200447AE2 /* Model.xcdatamodeld */; };
 		29E981581D59DB5600447AE2 /* ImageFile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E981561D59DB5600447AE2 /* ImageFile+CoreDataProperties.swift */; };
 		29E981591D59DB5600447AE2 /* ImageFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E981571D59DB5600447AE2 /* ImageFile.swift */; };
+=======
+>>>>>>> FETCH_HEAD
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,10 +33,13 @@
 		29E97FEE1D545A6A00447AE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29E97FF41D545B8000447AE2 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		29E97FF81D54683900447AE2 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		29E9814C1D5869B200447AE2 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		29E981511D58B37200447AE2 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		29E981561D59DB5600447AE2 /* ImageFile+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImageFile+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		29E981571D59DB5600447AE2 /* ImageFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFile.swift; sourceTree = "<group>"; };
+=======
+>>>>>>> FETCH_HEAD
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,17 +73,25 @@
 			isa = PBXGroup;
 			children = (
 				29E97FE21D545A6A00447AE2 /* AppDelegate.swift */,
+<<<<<<< HEAD
 				29E981501D58B37200447AE2 /* Model.xcdatamodeld */,
 				29E97FE61D545A6A00447AE2 /* Main.storyboard */,
 				29E97FE41D545A6A00447AE2 /* ViewController.swift */,
 				29E9814C1D5869B200447AE2 /* AddViewController.swift */,
+=======
+				29E97FE41D545A6A00447AE2 /* ViewController.swift */,
+				29E97FE61D545A6A00447AE2 /* Main.storyboard */,
+>>>>>>> FETCH_HEAD
 				29E97FF41D545B8000447AE2 /* TableViewCell.swift */,
 				29E97FE91D545A6A00447AE2 /* Assets.xcassets */,
 				29E97FF81D54683900447AE2 /* ImageViewController.swift */,
 				29E97FEB1D545A6A00447AE2 /* LaunchScreen.storyboard */,
 				29E97FEE1D545A6A00447AE2 /* Info.plist */,
+<<<<<<< HEAD
 				29E981561D59DB5600447AE2 /* ImageFile+CoreDataProperties.swift */,
 				29E981571D59DB5600447AE2 /* ImageFile.swift */,
+=======
+>>>>>>> FETCH_HEAD
 			);
 			path = TableViewAndCamara;
 			sourceTree = "<group>";
@@ -153,12 +167,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				29E981581D59DB5600447AE2 /* ImageFile+CoreDataProperties.swift in Sources */,
 				29E9814D1D5869B200447AE2 /* AddViewController.swift in Sources */,
 				29E97FF51D545B8000447AE2 /* TableViewCell.swift in Sources */,
 				29E97FE51D545A6A00447AE2 /* ViewController.swift in Sources */,
 				29E981521D58B37200447AE2 /* Model.xcdatamodeld in Sources */,
 				29E981591D59DB5600447AE2 /* ImageFile.swift in Sources */,
+=======
+				29E97FF51D545B8000447AE2 /* TableViewCell.swift in Sources */,
+				29E97FE51D545A6A00447AE2 /* ViewController.swift in Sources */,
+>>>>>>> FETCH_HEAD
 				29E97FF91D54683900447AE2 /* ImageViewController.swift in Sources */,
 				29E97FE31D545A6A00447AE2 /* AppDelegate.swift in Sources */,
 			);
@@ -312,6 +331,7 @@
 				29E97FF31D545A6A00447AE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+<<<<<<< HEAD
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
@@ -328,6 +348,10 @@
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
+=======
+		};
+/* End XCConfigurationList section */
+>>>>>>> FETCH_HEAD
 	};
 	rootObject = 29E97FD71D545A6A00447AE2 /* Project object */;
 }

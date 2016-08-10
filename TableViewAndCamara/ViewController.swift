@@ -7,6 +7,7 @@
 //
 
 import UIKit
+<<<<<<< HEAD
 import CoreData
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
@@ -15,6 +16,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     
     var imageList: [ImageFile] = [ImageFile]()
+=======
+
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+
+    
+    
+>>>>>>> FETCH_HEAD
     
     
     var pictureLists: [PictureList] = [
@@ -26,7 +34,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     
+<<<<<<< HEAD
 
+=======
+    @IBAction func testButton(sender: AnyObject) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .Camera
+        self.presentViewController(imagePicker, animated:
+            true, completion: nil)
+    }
+>>>>>>> FETCH_HEAD
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -56,6 +73,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
      reloadData()
 //        let book = NSEntityDescription.insertNewObjectForEntityForName("ImageFile", inManagedObjectContext: managedObjectContext) as! ImageFile
 //        
@@ -89,6 +107,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //        print("image list . content~~~~\(imageList)")
 
     }
+=======
+        
+    }
+
+>>>>>>> FETCH_HEAD
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
@@ -103,20 +126,32 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
+<<<<<<< HEAD
         return imageList.count
+=======
+        return pictureLists.count
+>>>>>>> FETCH_HEAD
     }
     
     var photo = "sky"
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! TableViewCell
+<<<<<<< HEAD
         cell.myImage.image = UIImage(data: imageList[indexPath.row].myImage!)
         cell.myLabel.text = imageList[indexPath.row].myLabel
+=======
+        cell.myImage.image = UIImage(named: pictureLists[indexPath.row].pic)
+        
+>>>>>>> FETCH_HEAD
         return cell
     }
     
     
+<<<<<<< HEAD
     
+=======
+>>>>>>> FETCH_HEAD
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         let shareAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Share", handler: {
             (action, indexPath) -> Void in
@@ -131,11 +166,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let deleteAction = UITableViewRowAction(style:
             UITableViewRowActionStyle.Default, title: "Delete", handler: { (action, indexPath)  -> Void in
                 //從data source刪除列
+<<<<<<< HEAD
                     let obj = self.imageList[indexPath.row]
                     self.managedObjectContext.deleteObject(obj)
                     self.appDelegate.saveContext()
                     self.reloadData()
 
+=======
+                self.pictureLists.removeAtIndex(indexPath.row)
+                self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+>>>>>>> FETCH_HEAD
                 
                 
         })
@@ -152,15 +192,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             if let indexPath = tableView.indexPathForSelectedRow {
                 let destinationController = segue.destinationViewController as! ImageViewController
                 destinationController.storage = pictureLists[indexPath.row]
+<<<<<<< HEAD
 //                destinationController.myTextField.text = imageList[indexPath.row].myLabel
+=======
+>>>>>>> FETCH_HEAD
             }
         }
     }
     
+<<<<<<< HEAD
 
     
     
     
+=======
+>>>>>>> FETCH_HEAD
     // MARK: - camara function
     
     func imagePickerController(picker: UIImagePickerController,didFinishPickingMediaWithInfo info: [String : AnyObject]) {
@@ -183,6 +229,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+<<<<<<< HEAD
     
     
     func reloadData() {
@@ -204,6 +251,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     
+=======
+>>>>>>> FETCH_HEAD
 }
 
 

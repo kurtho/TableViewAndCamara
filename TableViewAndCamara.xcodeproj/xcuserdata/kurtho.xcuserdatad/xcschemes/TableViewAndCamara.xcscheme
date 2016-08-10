@@ -61,12 +61,15 @@
             ReferencedContainer = "container:TableViewAndCamara.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+<<<<<<< HEAD
       <CommandLineArguments>
          <CommandLineArgument
             argument = "-com.apple.CoreData.SQLDebug 1"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
+=======
+>>>>>>> FETCH_HEAD
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

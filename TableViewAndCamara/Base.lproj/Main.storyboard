@@ -77,14 +77,24 @@
                     </view>
                     <navigationItem key="navigationItem" id="EvM-T1-s8M">
                         <rightBarButtonItems>
+<<<<<<< HEAD
                             <barButtonItem systemItem="camera" id="15N-CA-F8g">
+=======
+                            <barButtonItem title="Item" systemItem="add" id="15N-CA-F8g">
+>>>>>>> FETCH_HEAD
                                 <connections>
                                     <action selector="addButton:" destination="BYZ-38-t0r" id="Pjf-l7-nTR"/>
                                 </connections>
                             </barButtonItem>
+<<<<<<< HEAD
                             <barButtonItem systemItem="add" id="d8H-Gt-lC2">
                                 <connections>
                                     <segue destination="HgX-hR-mjB" kind="show" id="nXu-5k-DlL"/>
+=======
+                            <barButtonItem title="test" id="d8H-Gt-lC2">
+                                <connections>
+                                    <action selector="testButton:" destination="BYZ-38-t0r" id="v40-nM-U5j"/>
+>>>>>>> FETCH_HEAD
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -97,6 +107,7 @@
             </objects>
             <point key="canvasLocation" x="1062" y="337"/>
         </scene>
+<<<<<<< HEAD
         <!--Add View Controller-->
         <scene sceneID="WVq-Bf-794">
             <objects>
@@ -156,6 +167,8 @@
             </objects>
             <point key="canvasLocation" x="1858" y="-278"/>
         </scene>
+=======
+>>>>>>> FETCH_HEAD
         <!--Image View Controller-->
         <scene sceneID="9AV-7P-CFy">
             <objects>
